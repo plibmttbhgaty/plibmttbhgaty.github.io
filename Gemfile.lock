@@ -70,6 +70,10 @@ GEM
       rack-test (~> 0.6.2)
       thor (>= 0.15.2, < 2.0)
       tilt (~> 1.4.1, < 2.0)
+    middleman-deploy (0.2.4)
+      middleman-core (>= 3.0.0)
+      net-sftp
+      ptools
     middleman-livereload (3.1.1)
       em-websocket (>= 0.2.0)
       middleman-core (>= 3.0.2)
