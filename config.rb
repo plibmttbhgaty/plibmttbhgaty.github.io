@@ -65,8 +65,11 @@ page "/feed.xml", layout: false
 # Helpers
 ###
 
+# Directory indexes
+activate :directory_indexes
+
 # Automatic image dimensions on image_tag helper
-# activate :automatic_image_sizes
+activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
 # activate :livereload
