@@ -3,23 +3,73 @@ pageable: true
 per_page: 10
 ---
 
-<section class="home-abstract">
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCqejTawq2ywhae6-6pblN34P8kByl53XA&sensor=false"></script>
+
+<script type="text/javascript">
+    // When the window has finished loading, create our Google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic operations for a simple Google Map
+        // For more options see:
+        // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            zoom: 11,
+            center: new google.maps.LatLng(40.6700, -73.9400), // NYC
+            styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="event-map" seen below
+        var mapElement = document.getElementById('event-map');
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Add a marker because WHY NOT
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(40.6700, -73.9400),
+            map: map,
+            title: "Upcoming PLIBMTTBHGATYs"
+        });
+    }
+</script>
+
+<section class="home-abstract home-section">
     <div class="home-abstract-shim">
         <h1> Programming Languages I've Been Meaning To Try But Haven't Gotten Around To Yet</h1>
     </div>
 </section>
 
-<section class="home-locations">
-    <h1>Locations:</h1>
-    <ul class="home-locations-list">
-        <li><%= link_to 'Bath', '/bath' %></li>
-        <li><%= link_to 'Boston', '/boston' %></li>
-        <li><%= link_to 'Cambridge', '/cambridge' %></li>
-        <li><%= link_to 'Reykjavik', '/reykjavik' %></li>
-        <li><%= link_to 'San Francisco', '/san-francisco' %></li>
-        <li><%= link_to 'Zurich', '/zurich' %></li>
-    </ul>
-</section>
+<div class="home-about home-section">
+    <a name="about"><h2>About</h2></a>
+    <p>
+        PLIBMTTBHGATY is a lightly-structured party where people get together and work on a project in a new programming language, either with or just near one another.
+    </p>
+    <p>
+        This all started with the realization that plenty of people have a side proejct in mind to work on, that's it's more fun to work together, and that many of us are just waiting for a good excuse to get started!
+    </p>
+</div>
+
+<div class="home-events home-section">
+    <a name="events"><h2>Events</h2></a>
+    <div id="event-map"></div>
+</div>
+
+<div class="home-get-involved home-section">
+    <a name="get-involved"><h2>Get Involved</h2></a>
+    <p>
+        It's easy to throw a PLIBMTTBHGATY; just find a space, invite some friends, and <a href="mailto:stars+plibmttbhgaty@mit.edu">contact us</a> to let us know when it's happening.
+    </p>
+    <p>
+        For more information and advice about throwing a PLIBMTTBHGATY, see the <a href="/party-planning">Party Planning</a> page!
+    </p>
+</div>
+
+<div class="home-code-of-conduct home-section">
+    <a name="code-of-conduct"><h2>Code of Conduct</h2></a>
+    <p>
+        TBD.
+    </p>
+</div>
 
 <div class="home-container">
     <% if paginate && num_pages > 1 %>

@@ -9,9 +9,9 @@ section.event {
 
   a {
     text-decoration: none;
-    color: $blue;
+    color: $teal;
     &:hover {
-      color: $blue-link;
+      color: $teal;
       text-decoration: underline;
     }
   }
@@ -43,14 +43,14 @@ section.event .entry-meta .meta-label {
   background-color: #ccc;
   text-decoration: none;
   &:hover {
-    background-color: $blue-link;
+    background-color: $teal;
   }
 }
 
 section.event .entry-meta .meta-presenter a {
-  color: $blue-link;
+  color: $teal;
   &:hover {
-    color: $blue;
+    color: $teal;
   }
 }
 

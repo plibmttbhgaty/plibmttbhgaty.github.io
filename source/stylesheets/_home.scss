@@ -19,10 +19,10 @@
       text-align: center;
       font-size: 3em;
       line-height: 100%;
-      color: #333;
+      color: $salmon;
       border-radius: 10px;
       a {
-        color: $blue-link;
+        color: $teal;
         text-decoration: none;
 
         &:hover {
@@ -33,51 +33,24 @@
   }
 }
 
-// Home: Locations
-// ===============
-.home-locations {
-  @include outer-container;
-
-  h1 {
-    @include span-columns(4);
-    font-size: 0.9em;
-    text-align: center;
-    color: #ccc;
-  }
-
-  .home-locations-list {
-    @include span-columns(4);
-    text-align: center;
-    margin: 0 0 2em 0;
-    padding: 0 0 1em 0;
-    border-bottom: #ddd 1px solid;
-
-    li {
-      display: inline-block;
-      list-style-type: none;
-      margin: 0;
-      padding: 10px;
-
-      a {
-        color: #666;
-        font-weight: bold;
-        font-style: italic;
-        text-decoration: none;
-        font-size: 1.2em;
-        &:hover {
-          color: $blue-link;
-        }
-      }
+// Home Sections
+// =============
+.home-section {
+  a {
+    color: #333;
+    &:hover {
+      color: $salmon;
     }
   }
-}
 
-@include media($desktop) {
-  .home-chapters {
-    h1 {
-      display: none;
-    }
+  h2 {
+    color: $teal;
   }
+
+  color: 333;
+  margin: 0 0 2em 0;
+  padding: 0 0 1em 0;
+  border-bottom: #ddd 1px solid;
 }
 
 // Home Entries
@@ -96,7 +69,7 @@
         }
 
         i {
-          color: $blue-link;
+          color: $teal;
         }
       }
     }
@@ -107,4 +80,10 @@
       padding: 1em 0;
     }
   }
+}
+
+// Maps
+#event-map {
+  width: 100%;
+  height: 500px;
 }

@@ -11,8 +11,8 @@ $desktop: new-breakpoint(min-width 768px 4);
 @import "neat";
 
 // Colors
-$blue: #036;
-$blue-link: lighten($blue, 30);
+$salmon: #ff91a4;
+$teal: #91ffec;
 
 // Base styles
 @import "base";

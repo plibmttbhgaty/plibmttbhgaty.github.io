@@ -6,7 +6,7 @@
 
     <title><%= ' - ' + current_article.title unless current_article.nil? %> | PLIBMTTBHGATY</title>
 
-    <%= stylesheet_link_tag "font-awesome.min", "screen" %>
+    <%= stylesheet_link_tag "screen" %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= javascript_include_tag  "all" %>
   </head>
