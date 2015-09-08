@@ -104,3 +104,14 @@ configure :build do
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
 end
+
+###
+# Custom Helpers
+###
+helpers do
+  def home_meta(article)
+    text = <<OUT
+OUT
+    ERB.new(text).result()
+  end
+end

@@ -9,3 +9,11 @@ gem "middleman-livereload"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+# XML parsing
+gem "nokogiri"
+
+# Front-endy things
+gem "sass"
+gem "bourbon"
+gem "neat"
