@@ -1,0 +1,28 @@
+// Past Event Entries
+// ============
+.past-events-container {
+  @include outer-container;
+
+  section.past-event-entry {
+    padding: 1em;
+
+    footer {
+      a {
+        font-style: italic;
+        &:hover {
+          text-decoration: none;
+        }
+
+        i {
+          color: $teal;
+        }
+      }
+    }
+  }
+
+  @include media($desktop) {
+    section.home-entry {
+      padding: 1em 0;
+    }
+  }
+}
