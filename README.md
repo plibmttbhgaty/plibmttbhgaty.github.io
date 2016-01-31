@@ -1,6 +1,27 @@
 # PLIBMTTBHGATY
 
-## Contributing to the Site
+## Adding Your Event to the Website
+
+1. Fork this repo
+2. Create a branch
+
+`git checkout -b <location-name>-<date>`
+
+3. Update `source/events.json` with your event details. Here's an example:
+
+```
+{
+  "location": "San Francisco, CA",
+  "hostName": "thoughtbot",
+  "rsvpUrl": "http://thoughtbot-plibmttbhgaty-sf.eventbrite.com",
+  "date": "2016-01-03"
+}
+```
+
+3. Open a pull request to merge your branch into
+   `plibmttbhgaty.github.io:middleman`
+4. Once your pull request has been reviewed and merged by a maintainer, delete
+   your branch
 
 ## How to Work With the Site
 
