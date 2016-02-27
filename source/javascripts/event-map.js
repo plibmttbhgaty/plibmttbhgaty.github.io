@@ -10,8 +10,8 @@ function addInfoWindow(marker, event) {
                       '</div>' +
                       '<h1 class="info-heading">' + event["location"] + '</h1>' +
                       '<ul>' +
-                      '<li><b>Host:</b> ' + event["host"] + '</li>' +
-                      '<li><b>RSVP:</b> ' + event["rsvp"] + '</li>' +
+                      '<li><b>Host:</b> ' + event["hostName"] + '</li>' +
+                      '<li><b>RSVP:</b> ' + event["rsvpUrl"] + '</li>' +
                       '</ul>' +
                       '<center><a href="' + event["more-info"] + '">More Information</b></a><br><br>';
 

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   animateElements($(".first-letter"));
+  showEventsList($("#events-list"));
 });
 
 function animateElements(element, animateDelay) {
@@ -19,5 +20,23 @@ function animateElements(element, animateDelay) {
         .animate({color: changedColor}, animateSpeed)
         .animate({color: originalColor}, animateSpeed);
     }
+  });
+}
+
+function showEventsList($element) {
+  $.get("/events.json").done(
+    function(data) {
+      $.each(data, function(_index, value) {
+        var event = value;
+        var eventDetailsListItem = "<li><a href='" +
+          event.rsvpUrl +
+          "'>" +
+          event.location +
+          " on " +
+          event.date +
+          "</a></li>";
+        $element.append(eventDetailsListItem);
+      }
+    )
   });
 }
