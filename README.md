@@ -2,12 +2,12 @@
 
 ## Adding Your Event to the Website
 
-1. Fork this repo
-2. Create a branch
+* Fork this repo
+* Create a branch
 
 `git checkout -b <location-name>-<date>`
 
-3. Update `source/events.json` with your event details. Here's an example:
+* Update `source/events.json` with your event details. Here's an example:
 
 ```
 {
@@ -18,9 +18,9 @@
 }
 ```
 
-3. Open a pull request to merge your branch into
+* Open a pull request to merge your branch into
    `plibmttbhgaty.github.io:middleman`
-4. Once your pull request has been reviewed and merged by a maintainer, delete
+* Once your pull request has been reviewed and merged by a maintainer, delete
    your branch
 
 ## How to Work With the Site
