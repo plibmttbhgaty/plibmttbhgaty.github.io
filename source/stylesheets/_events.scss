@@ -1,0 +1,120 @@
+.events {
+  position: relative;
+  width: 100%;
+
+  @include media($large-screen) {
+    width: 125%;
+  }
+
+  .box {
+
+    @include media($large-screen) {
+      float: right;
+      min-width: 28rem;
+    }
+  }
+}
+#event-map {
+  border: 1px rgba(white, 0.75) solid;
+  box-shadow: 0 5px 20px rgba($black, 0.15);
+  height: 100vh;
+  margin-left: -($base-spacing);
+  max-height: 350px;
+  width: calc(100% + (2 * #{$base-spacing}));
+
+  @include media($large-screen) {
+    @include position(relative, -1rem null null 0);
+    margin-left: auto;
+    max-height: 450px;
+    max-width: 65rem;
+    width: calc(100% + #{$base-spacing});
+  }
+
+  @include media($wide-screen) {
+    max-height: 650px;
+  }
+}
+
+.events-list {
+  counter-reset: events;
+  padding-left: 0;
+}
+
+.event {
+  counter-increment: events;
+  list-style-type: none;
+  position: relative;
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    display: inline-block;
+    width: calc((100% - #{$base-spacing}) / 2);
+
+    &:nth-of-type(2n) {
+      margin-left: $base-spacing;
+    }
+  }
+
+  &:not(:last-of-type) {
+    margin-bottom: $larger-spacing;
+  }
+
+  &::before {
+    @include padding(0.35rem 0.35rem 0.15rem);
+    @include position(absolute, -0.2rem null null null);
+    background-color: $secondary-color;
+    border-radius: $base-border-radius;
+    color: white;
+    content: counter(events);
+    display: inline-block;
+    line-height: 1;
+    font-size: $small-font-size;
+    font-weight: $bold-font-weight;
+  }
+
+  a {
+    border-bottom: 0;
+    display: block;
+    font-weight: $base-font-weight;
+    margin-left: 2.25rem;
+  }
+}
+
+.event-location {
+  font-weight: $bold-font-weight;
+  margin-bottom: 0;
+  transition: all $anim-duration $anim-easing;
+
+  .event:hover & {
+    color: $accent-color;
+  }
+}
+
+.event-date,
+.event-host {
+  @include margin(0.5rem null 0);
+  font-size: $base-font-size;
+
+  &::before {
+    color: $gray;
+    display: inline-block;
+    font-weight: $bold-font-weight;
+    margin-right: $small-spacing;
+    width: 1.5em;
+  }
+}
+
+.event-date::before {
+  content: "on:";
+}
+
+.event-host::before {
+  content: "at:";
+}
+
+.toggle-past-events {
+  @include turn-sans-serif;
+  border: 0;
+  color: $accent-color;
+  font-size: $small-font-size;
+  text-transform: uppercase;
+}

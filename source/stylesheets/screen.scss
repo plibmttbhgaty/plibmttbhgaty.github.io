@@ -2,35 +2,12 @@
 
 @import "bourbon";
 @import "neat-helpers";
-
-@font-face {
-  font-family: 'socicon';
-  src: url('../font/socicon.eot');
-  src: url('../font/socicon.eot?#iefix') format('embedded-opentype'),
-       url('../font/socicon.woff') format('woff'),
-       url('../font/socicon.ttf') format('truetype'),
-       url('../font/socicon.svg#sociconregular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  text-transform: initial;
-}
-
-.socicon {
-  font-family: 'socicon' !important;
-}
-
-
-// Mobile first
-$grid-columns: 4;
-$desktop: new-breakpoint(min-width 768px 4);
-
 @import "neat";
 
-// Colors
-$salmon: #ff91a4;
-$teal: #91ffec;
-
-// Base styles
+@import "variables";
 @import "base";
-@import "home";
-@import "event";
+@import "header";
+@import "footer";
+@import "hero-text-animation";
+@import "index-content";
+@import "events";

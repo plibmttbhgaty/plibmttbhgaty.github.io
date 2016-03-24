@@ -1,26 +1,27 @@
 $(document).ready(function() {
-  animateElements($(".first-letter"));
+  animateElements($(".word-highlight"));
   showEventsList($("#events-list"));
 });
 
-function animateElements(element, animateDelay) {
-  var delayMultiplier = 150,
-      animateSpeed = 150,
-      changedColor = "#91ffec",
-      originalColor = "#ff91a4";
+var wordCounter = 0;
+function animateElements(element) {
+  setTimeout(function() {
+    var words = element,
+        numOfWords = element.length,
+        isHighlighted = "is-highlighted",
+        thisWord = element[wordCounter];
 
-  $.each(element, function(index, value) {
-    if (animateDelay == true) {
-      $(this).delay(index * delayMultiplier)
-        .animate({color: changedColor}, animateSpeed)
-        .delay(1950 - (index * delayMultiplier))
-        .animate({color: originalColor}, animateSpeed);
+    wordCounter++;
+    words.removeClass(isHighlighted);
+    $(thisWord).addClass(isHighlighted);
+
+    if (wordCounter <= numOfWords) {
+      animateElements(words);
     } else {
-      $(this).delay(index * delayMultiplier)
-        .animate({color: changedColor}, animateSpeed)
-        .animate({color: originalColor}, animateSpeed);
+      wordCounter = 0;
+      animateElements(words);
     }
-  });
+  }, 300);
 }
 
 function showEventsList($element) {
@@ -28,13 +29,15 @@ function showEventsList($element) {
     function(data) {
       $.each(data, function(_index, value) {
         var event = value;
-        var eventDetailsListItem = "<li><a href='" +
+        var eventDetailsListItem = "<li class='event'><a href='" +
           event.rsvpUrl +
-          "'>" +
+          "'><p class='event-location'>" +
           event.location +
-          " on " +
+          "</p><p class='event-date'>" +
           event.date +
-          "</a></li>";
+          "</p><p class='event-host'>" +
+          event.hostName +
+          "</p></a></li>";
         $element.append(eventDetailsListItem);
       }
     )

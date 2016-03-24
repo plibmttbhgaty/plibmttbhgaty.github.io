@@ -1,0 +1,52 @@
+.fullname {
+  @include margin($base-spacing null 0);
+  color: $hero-text-color;
+  font-size: 10vw;
+  pointer-events: none;
+  z-index: $z-1above;
+  max-width: 100vh;
+
+  @include media($large-screen) {
+    @include position(fixed, 0 null null 0);
+    font-size: 7.75vh;
+    margin-top: 0;
+  }
+
+  @include media(min-width $large-screen min-height $tall-screen) {
+    font-size: 80px;
+  }
+
+  @include media($wide-screen) {
+    font-size: 12.3vh;
+    overflow: visible;
+  }
+
+  @include media(min-width $wide-screen min-height $tall-screen) {
+    font-size: 115px;
+    max-width: 850px;
+  }
+}
+
+.word-highlight {
+  display: inline-block;
+  text-shadow: 0 1px 0 $hero-shadow-color;
+  transition: all 0.125s cubic-bezier(.17,.67,.83,.67);
+
+  @include media($large-screen) {
+    display: block;
+  }
+
+  @include media($wide-screen) {
+    display: inline-block;
+  }
+
+  &:nth-of-type(2) {
+    @include media($wide-screen) {
+      display: block;
+    }
+  }
+}
+
+.is-highlighted {
+  @include drop-shadow--text($hero-shadow-color);
+}
