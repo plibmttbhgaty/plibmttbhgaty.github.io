@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title><%= ' - ' + current_article.title unless current_article.nil? %> | PLIBMTTBHGATY</title>
+    <title>PLIBMTTBHGATY</title>
 
     <%= stylesheet_link_tag "screen" %>
+    <link href='https://fonts.googleapis.com/css?family=Biryani:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
     <%= javascript_include_tag  "all" %>
+    <%= partial "partials/google-maps-scripts" %>
   </head>
 
   <body class="<%= page_classes %>">
-    <%= partial 'partials/header' %>
+    <%= partial 'partials/hero-text-animation' %>
 
-    <div id="main" role="main">
+    <main id="main" role="main">
+      <%= partial 'partials/header' %>
       <%= yield %>
-    </div>
-
-    <%= partial 'partials/footer' %>
+      <%= partial 'partials/footer' %>
+    </main>
   </body>
 </html>

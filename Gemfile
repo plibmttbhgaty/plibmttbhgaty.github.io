@@ -17,3 +17,5 @@ gem "nokogiri"
 gem "sass"
 gem "bourbon"
 gem "neat"
+gem 'middleman-autoprefixer'
+gem "jquery-middleman"

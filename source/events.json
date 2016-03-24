@@ -1,12 +1,12 @@
 [{
-  "location": "Melbourne, VIC",
-  "hostName": "FastMail",
-  "rsvpUrl": "https://t.co/FbiKVEryTy",
-  "date": "2016-01-30"
-},
-{
   "location": "Des Moines, IA",
   "hostName": "Gravitate",
   "rsvpUrl": "http://plibmttbhgaty.com",
-  "date": "2016-01-09"
+  "date": "January 09, 2016"
+},
+{
+  "location": "Melbourne, VIC",
+  "hostName": "FastMail",
+  "rsvpUrl": "https://t.co/FbiKVEryTy",
+  "date": "January 30, 2016"
 }]

@@ -1,0 +1,44 @@
+.content-section {
+  margin-bottom: $below-spacing;
+
+  @include media($large-screen) {
+    margin-bottom: $large-below-spacing;
+  }
+}
+
+.host-party {
+  h3 {
+    font-weight: $bold-font-weight;
+    margin-top: $larger-spacing;
+  }
+}
+
+.party-ingredients {
+  margin-bottom: $larger-spacing;
+  padding-left: 0;
+
+  @include media($medium-screen) {
+    columns: 2;
+  }
+}
+
+.party-ingredient {
+  list-style-type: none;
+  position: relative;
+
+  &::before {
+    @include size(0.5rem);
+    background-color: $secondary-color;
+    border-radius: $base-border-radius;
+    content: "";
+    display: inline-block;
+    margin-right: $base-spacing;
+  }
+
+  p {
+    display: inline-block;
+    margin-bottom: 0;
+    max-width: calc(100% - #{$base-spacing} - 0.5rem);
+    vertical-align: text-top;
+  }
+}

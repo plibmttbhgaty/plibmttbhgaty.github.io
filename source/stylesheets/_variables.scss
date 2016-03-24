@@ -1,0 +1,129 @@
+// Viewports
+$medium-screen: 600px;
+$large-screen: 900px;
+$wide-screen: 1400px;
+$max-screen: 1600px;
+$tall-screen: 1000px;
+
+//Fonts
+@font-face {
+  font-family: Neutra;
+  src: url("/fonts/NeutraDisplay-Titling.otf") format("opentype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: Neutra;
+  src: url("/fonts/Neutra2Display-Bold.otf") format("opentype");
+  font-weight: 600;
+}
+
+$sans: Neutra, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-family: "Biryani", $sans;
+$header-font-family: $sans;
+$logo-font-family: $sans;
+
+$base-font-weight: 300;
+$bold-font-weight: 700;
+$header-font-weight: 800;
+$header-light-weight: 600;
+
+$base-font-size: 16px;
+$small-font-size: 12px;
+$large-font-size: 20px;
+$header-font-size: 30px;
+$copy-font-size: $large-font-size;
+
+
+// Colors
+$pink: #f639a5;
+$pink-dark: #df3f82;
+$blue: #0093ff;
+$blue-light: #f6fbff;
+$blue-dark: #e3eff8;
+$teal: #a7ffeb;
+$teal-dark: #6ADEC4;
+$yellow: #fff25d;
+$yellow-light: #fffdf1;
+$yellow-dark: desaturate(darken($yellow-light, 40%), 70%);
+$orange: #fd6e55;
+$orange-dark: #CB3D20;
+$gray: #BFC1C1;
+$gray-light: lighten($gray, 10%);
+$purple: #e7e8f2;
+$black: #1A1919;
+
+$base-font-color: $black;
+$body-bg-color: $yellow-light;
+$accent-color: $pink;
+$secondary-color: $teal-dark;
+$hero-text-color: $secondary-color;
+$hero-shadow-color: desaturate(darken($hero-text-color, 10%), 15%);
+
+// Borders
+$base-border-color: $accent-color;
+$base-border: 6px $base-border-color solid;
+$base-border-radius: 3px;
+
+// Spacing
+$base-spacing: 1rem;
+$large-spacing: ($base-spacing * 1.5);
+$larger-spacing: ($large-spacing * 2);
+$largest-spacing: ($base-spacing * 3);
+$small-spacing: ($base-spacing * 0.85);
+$below-spacing: 4rem;
+$large-below-spacing: 9.5rem;
+
+// Animation
+$anim-duration: 0.15s;
+$anim-easing: ease-in;
+
+// Z-index
+$z-1under: -1;
+$z-1above: 1;
+
+// Media
+$shadow-height: 12px;
+
+@mixin drop-shadow--text($color) {
+  text-shadow: $color 1px 1px,
+    $color 2px 2px,
+    $color 3px 3px,
+    $color 4px 4px,
+    $color 5px 5px,
+    $color 6px 6px,
+    $color 7px 7px,
+    $color 8px 8px,
+    $color 9px 9px,
+    $color 10px 10px,
+    $color 11px 11px,
+    $color 12px 12px;
+  transform: translate3d(-($shadow-height), -($shadow-height), 0);
+}
+
+@mixin drop-shadow--logo($color) {
+  text-shadow: $color 1px 1px,
+    $color 2px 2px;
+  transform: translate3d(-2px, -2px, 0);
+}
+
+@mixin drop-shadow--box($color) {
+  transition: all 0.25s ease-in;
+
+  &:hover {
+    box-shadow: $color 1px 1px,
+      $color 2px 2px,
+      $color 3px 3px,
+      $color 4px 4px,
+      $color 5px 5px,
+      $color 6px 6px,
+      $color 7px 7px,
+      $color 8px 8px;
+    transform: translate3d(-8px, -8px, 0);
+  }
+}
+
+@mixin turn-sans-serif {
+  font-family: $header-font-family;
+  font-weight: $header-light-weight;
+}

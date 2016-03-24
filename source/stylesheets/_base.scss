@@ -1,113 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Courier Bold';
-  @include media($desktop) {
-    padding: 0 4em;
+  @include size(100%);
+}
+
+body {
+  @include padding(null $base-spacing);
+  background: image-url("bg.png") $body-bg-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  max-width: $max-screen;
+  margin: 0 auto;
+}
+
+main {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  font-size: $large-font-size;
+  overflow: visible;
+  padding-top: $largest-spacing;
+  position: relative;
+
+  @include media($large-screen) {
+    font-size: $copy-font-size;
+    margin-left: auto;
+    width: 65%;
+  }
+
+  @include media($wide-screen) {
+    max-width: 60rem;
+    padding-top: 15vh;
+    width: 50%;
   }
 }
 
-// Top Navigation
-// ==============
-.nav-top {
-  @include outer-container;
+p {
+  margin-top: 0;
+}
 
-  @include media($desktop) {
-    border-bottom: #ddd 1px solid;
-  }
+strong {
+  font-weight: $bold-font-weight;
+}
 
-  .nav-top-text {
-    @include span-columns(4);
-    text-align: center;
-    margin: 1em 0 0 0;
-    padding: 1em 0;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $header-font-family;
+  margin-top: 0;
+}
 
-    a {
-      color: $teal;
-      text-decoration: none;
-      &:hover {
-        color: #666;
-      }
-    }
+h1,
+h2 {
+  font-weight: $header-font-weight;
+  text-transform: uppercase;
+}
 
-    @include media($desktop) {
-      @include span-columns(1);
-      text-align: left;
-    }
-  }
+h2 {
+  @include margin($large-spacing null $larger-spacing);
+  font-size: $header-font-size * 0.65;
 
-  nav {
-    @include span-columns(4);
-    text-align: center;
-
-    @include media($desktop) {
-      @include span-columns(3);
-      text-align: right;
-    }
+  @include media($medium-screen) {
+    font-size: $header-font-size;
   }
 }
 
-// Horizontal Menu
-@mixin nav-list-links {
-  a {
-    color: #666;
+h3 {
+  color: $secondary-color;
+  font-size: $large-font-size;
+}
+
+a {
+  border-bottom: 2px rgba($accent-color, 0.15) solid;
+  color: $base-font-color;
+  display: inline-block;
+  font-weight: $bold-font-weight;
+  line-height: 1.15;
+  text-decoration: none;
+  transition: all $anim-duration $anim-easing;
+
+  &:hover,
+  &:active {
+    border-color: $accent-color;
+  }
+}
+
+img,
+svg {
+  vertical-align: top;
+}
+
+.box {
+  @include padding($base-spacing);
+  background-color: white;
+  border-top: $base-border;
+
+  @include media($large-screen) {
+    @include drop-shadow--box($accent-color);
+    @include padding($larger-spacing);
+    border: $base-border;
+  }
+}
+
+.button {
+  @include drop-shadow--box($accent-color);
+  background-color: $accent-color;
+  border: 3px $accent-color solid;
+  color: white;
+  display: inline-block;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  padding: $small-spacing;
+
+  &:hover,
+  &:active {
+    background-color: white;
+    color: $accent-color;
     text-decoration: none;
-    &:hover {
-      color: $teal;
-    }
-  }
-}
-
-@mixin nav-list-horizontal {
-  padding: 2em 0;
-
-  li {
-    display: inline-block;
-    list-style-type: none;
-    padding: 0 10px;
-    margin: 0;
-    border-right: #ddd 1px solid;
-    background-color: #fff;
-
-    &:last-child {
-      border-right: 0px;
-      padding-right: 0;
-    }
-
-    &:hover {
-      background-color: #fff;
-      a {
-        color: #666;
-      }
-    }
-
-    @include nav-list-links;
-  }
-}
-
-.nav-top-list {
-  margin: 0;
-  padding: 0;
-
-  li {
-    text-align: center;
-    list-style-type: none;
-    padding: .5em 0;
-    margin: 0 0 1px 0;
-    background-color: #eee;
-
-    @include nav-list-links;
-
-    &:hover {
-      background-color: $teal;
-      cursor: pointer;
-      a {
-        color: #fff;
-      }
-    }
-  }
-
-  @include media($desktop) {
-    @include nav-list-horizontal;
   }
 }
