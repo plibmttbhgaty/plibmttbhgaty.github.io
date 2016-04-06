@@ -11,16 +11,16 @@
   }
 }
 
-.logotype {
-  @include drop-shadow--logo(darken($hero-shadow-color, 25%));
-  border: 0;
-  color: darken($hero-shadow-color, 10%);
+.acronym {
+  @include margin($large-spacing null $larger-spacing);
+  animation: bounce 1s $ease-in-out-sine alternate infinite;
+  color: $accent-color;
   font-family: $logo-font-family;
-  font-size: $copy-font-size;
+  font-size: 9vw;
   font-weight: $header-font-weight;
 
-  @include media($wide-screen) {
-    font-size: $header-font-size;
+  @include media($large-screen) {
+    font-size: 3rem;
   }
 }
 
@@ -34,7 +34,7 @@
   list-style-type: none;
 
   a {
-    @include drop-shadow--box($secondary-color);
+    @include box-hover-long-shadow($secondary-color);
     border: 0;
     display: block;
     line-height: 1;

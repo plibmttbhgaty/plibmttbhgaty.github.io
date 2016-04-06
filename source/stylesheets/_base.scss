@@ -101,14 +101,14 @@ svg {
   border-top: $base-border;
 
   @include media($large-screen) {
-    @include drop-shadow--box($accent-color);
+    @include box-hover-long-shadow($accent-color, 20);
     @include padding($larger-spacing);
     border: $base-border;
   }
 }
 
 .button {
-  @include drop-shadow--box($accent-color);
+  @include box-hover-long-shadow($accent-color);
   background-color: $accent-color;
   border: 3px $accent-color solid;
   color: white;

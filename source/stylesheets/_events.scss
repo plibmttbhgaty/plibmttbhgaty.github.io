@@ -23,7 +23,7 @@
   width: calc(100% + (2 * #{$base-spacing}));
 
   @include media($large-screen) {
-    @include position(relative, -1rem null null 0);
+    @include position(relative, -1.75rem null null 0);
     margin-left: auto;
     max-height: 450px;
     max-width: 65rem;
@@ -112,9 +112,10 @@
 }
 
 .toggle-past-events {
-  @include turn-sans-serif;
   border: 0;
   color: $accent-color;
+  font-family: $header-font-family;
   font-size: $small-font-size;
+  font-weight: $header-light-weight;
   text-transform: uppercase;
 }

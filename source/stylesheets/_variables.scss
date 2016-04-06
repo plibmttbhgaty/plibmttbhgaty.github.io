@@ -74,7 +74,7 @@ $small-spacing: ($base-spacing * 0.85);
 $below-spacing: 4rem;
 $large-below-spacing: 9.5rem;
 
-// Animation
+// Animation timing
 $anim-duration: 0.15s;
 $anim-easing: ease-in;
 
@@ -85,45 +85,42 @@ $z-1above: 1;
 // Media
 $shadow-height: 12px;
 
-@mixin drop-shadow--text($color) {
-  text-shadow: $color 1px 1px,
-    $color 2px 2px,
-    $color 3px 3px,
-    $color 4px 4px,
-    $color 5px 5px,
-    $color 6px 6px,
-    $color 7px 7px,
-    $color 8px 8px,
-    $color 9px 9px,
-    $color 10px 10px,
-    $color 11px 11px,
-    $color 12px 12px;
-  transform: translate3d(-($shadow-height), -($shadow-height), 0);
+@function shadow-array-generator($color, $num) {
+  $array: ();
+
+  @for $i from 1 to ($num + 1) {
+    $this-shadow: $color #{$i}px #{$i}px;
+    $array: append($array, $this-shadow, "comma");
+  }
+
+  @return $array;
 }
 
-@mixin drop-shadow--logo($color) {
-  text-shadow: $color 1px 1px,
-    $color 2px 2px;
-  transform: translate3d(-2px, -2px, 0);
+@mixin text-long-shadow($color, $depth: 12) {
+  text-shadow: shadow-array-generator($color, $depth);
+  transform: translate3d(calc(#{$depth} * -1px), calc(#{$depth} * -1px), 0);
 }
 
-@mixin drop-shadow--box($color) {
+@mixin box-hover-long-shadow($color, $depth: 8) {
   transition: all 0.25s ease-in;
 
   &:hover {
-    box-shadow: $color 1px 1px,
-      $color 2px 2px,
-      $color 3px 3px,
-      $color 4px 4px,
-      $color 5px 5px,
-      $color 6px 6px,
-      $color 7px 7px,
-      $color 8px 8px;
-    transform: translate3d(-8px, -8px, 0);
+    box-shadow: shadow-array-generator($color, $depth);
+    transform: translate3d(calc(#{$depth} * -1px), calc(#{$depth} * -1px), 0);
   }
 }
 
-@mixin turn-sans-serif {
-  font-family: $header-font-family;
-  font-weight: $header-light-weight;
+// Animation keyframes
+@keyframes bounce {
+  0% {
+    @include text-long-shadow(darken($accent-color, 15%), 3);
+  }
+
+  50% {
+    @include text-long-shadow(darken($accent-color, 15%), 6);
+  }
+
+  100% {
+    @include text-long-shadow(darken($accent-color, 15%), 3);
+  }
 }

@@ -48,5 +48,5 @@
 }
 
 .is-highlighted {
-  @include drop-shadow--text($hero-shadow-color);
+  @include text-long-shadow($hero-shadow-color)
 }
