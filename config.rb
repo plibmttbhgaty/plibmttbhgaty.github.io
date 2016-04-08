@@ -105,6 +105,10 @@ configure :build do
   # set :http_prefix, "/Content/images/"
 end
 
+activate :deploy do |deploy|
+  deploy.deploy_method = :git
+end
+
 ###
 # Custom Helpers
 ###
