@@ -1,3 +1,7 @@
+header.header {
+  display: inherit;
+}
+
 .header {
   @include margin(null null $larger-spacing);
   // display: flex;
@@ -22,11 +26,6 @@
   @include media($large-screen) {
     font-size: 3rem;
   }
-}
-
-.acronym a {
-  color: $accent-color;
-  border-bottom: none;
 }
 
 .social-list {
