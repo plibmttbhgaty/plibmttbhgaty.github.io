@@ -1,3 +1,7 @@
+header.header {
+  display: inherit;
+}
+
 .header {
   @include margin(null null $larger-spacing);
   // display: flex;
