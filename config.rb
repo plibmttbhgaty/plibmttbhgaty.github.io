@@ -1,5 +1,6 @@
 # Time.zone = "UTC"
 
+activate :sprockets
 activate :autoprefixer
 
 ###
