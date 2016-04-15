@@ -1,6 +1,9 @@
 $(document).ready(function() {
   animateElements($(".word-highlight"));
-  showEventsList($("#events-list"));
+  buildEventsLists({
+    "$upcomingEventsList": $("#events-list"),
+    "$pastEventsList": $("#past-events-list"),
+  });
 });
 
 var wordCounter = 0;
@@ -24,22 +27,51 @@ function animateElements(element) {
   }, 300);
 }
 
-function showEventsList($element) {
+function buildEventsLists(options) {
+  $upcomingEventsList = options.$upcomingEventsList;
+  $pastEventsList = options.$pastEventsList;
+
   $.get("/events.json").done(
     function(data) {
       $.each(data, function(_index, value) {
+        var currentDate = Date.now()
         var event = value;
-        var eventDetailsListItem = "<li class='event'><a href='" +
-          event.rsvpUrl +
-          "'><p class='event-location'>" +
-          event.location +
-          "</p><p class='event-date'>" +
-          event.date +
-          "</p><p class='event-host'>" +
-          event.hostName +
-          "</p></a></li>";
-        $element.append(eventDetailsListItem);
+        var eventDate = Date.parse(event.date);
+
+        if (eventDate > Date.now()) {
+          var eventListItem = buildUpcomingEventListItem(event);
+          $upcomingEventsList.append(eventListItem);
+        } else {
+          var eventListItem = buildPastEventListItem(event);
+          $pastEventsList.append(eventListItem);
+        }
       }
     )
   });
+}
+
+function buildUpcomingEventListItem(event, classes) {
+  var element = "<li class='event'><a href='" +
+    event.rsvpUrl +
+    "'><p class='event-location'>" +
+    event.location +
+    "</p><p class='event-date'>" +
+    event.date +
+    "</p><p class='event-host'>" +
+    event.hostName +
+    "</p></a></li>";
+  return element
+}
+
+function buildPastEventListItem(event, classes) {
+  var element = "<li class='event past-event'><a href='" +
+    event.rsvpUrl +
+    "'><p class='event-location'>" +
+    event.location +
+    "</p><p class='event-date'>" +
+    event.date +
+    " (Past)</p><p class='event-host'>" +
+    event.hostName +
+    "</p></a></li>";
+  return element
 }

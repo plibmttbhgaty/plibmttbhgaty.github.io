@@ -40,6 +40,12 @@
   padding-left: 0;
 }
 
+.past-events-list {
+  counter-reset: none;
+  margin-top: $large-spacing;
+  padding-top: $large-spacing;
+}
+
 .event {
   counter-increment: events;
   list-style-type: none;
@@ -79,6 +85,16 @@
   }
 }
 
+.past-event {
+  a {
+    color: $gray;
+  }
+
+  &::before {
+    content: none;
+  }
+}
+
 .event-location {
   font-weight: $bold-font-weight;
   margin-bottom: 0;
@@ -109,13 +125,4 @@
 
 .event-host::before {
   content: "at:";
-}
-
-.toggle-past-events {
-  border: 0;
-  color: $accent-color;
-  font-family: $header-font-family;
-  font-size: $small-font-size;
-  font-weight: $header-light-weight;
-  text-transform: uppercase;
 }
