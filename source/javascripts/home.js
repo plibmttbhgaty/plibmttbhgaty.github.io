@@ -33,20 +33,31 @@ function buildEventsLists(options) {
 
   $.get("/events.json").done(
     function(data) {
+      var noUpcomingEvents = true;
+
       $.each(data, function(_index, value) {
         var event = value;
         var eventDate = Date.parse(event.date);
 
         if (eventIsUpcoming(eventDate)) {
+          noUpcomingEvents = false;
           var eventListItem = buildUpcomingEventListItem(event);
           $upcomingEventsList.append(eventListItem);
         } else {
           var eventListItem = buildPastEventListItem(event);
           $pastEventsList.append(eventListItem);
         }
+
+        if (noUpcomingEvents) {
+          showNoUpcomingEventsMessage();
+        }
       }
     )
   });
+}
+
+function showNoUpcomingEventsMessage() {
+  $(".no-upcoming-events").removeClass("hidden");
 }
 
 function buildUpcomingEventListItem(event, classes) {

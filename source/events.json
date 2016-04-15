@@ -1,19 +1,19 @@
 [{
-  "location": "San Francisco, CA",
-  "hostName": "thoughtbot",
-  "rsvpUrl": "http://plibmttbhgaty.com",
-  "date": "May 07, 2016"
-},
-
-{
-  "location": "Des Moines, IA",
-  "hostName": "Gravitate",
-  "rsvpUrl": "http://plibmttbhgaty.com",
-  "date": "April 20, 2016"
+  "location": "Portland, OR",
+  "hostName": "Simple",
+  "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-21843234703",
+  "date": "March 05, 2016"
 },
 {
   "location": "Melbourne, VIC",
   "hostName": "FastMail",
-  "rsvpUrl": "https://t.co/FbiKVEryTy",
-  "date": "April 14, 2016"
-}]
+  "rsvpUrl": "http://www.meetup.com/PLIBMTTBHGATY-Melbourne",
+  "date": "January 30, 2016"
+},
+{
+  "location": "Des Moines, IA",
+  "hostName": "Gravitate",
+  "rsvpUrl": "http://www.meetup.com/Area515/events/226557087/",
+  "date": "January 09, 2016"
+}
+]
