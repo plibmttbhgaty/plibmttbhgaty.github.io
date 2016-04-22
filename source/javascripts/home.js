@@ -37,9 +37,8 @@ function buildEventsLists(options) {
 
       $.each(data, function(_index, value) {
         var event = value;
-        var eventDate = Date.parse(event.date);
 
-        if (eventIsUpcoming(eventDate)) {
+        if (eventIsUpcoming(event)) {
           noUpcomingEvents = false;
           var eventListItem = buildUpcomingEventListItem(event);
           $upcomingEventsList.append(eventListItem);
@@ -86,7 +85,8 @@ function buildPastEventListItem(event, classes) {
   return element
 }
 
-function eventIsUpcoming(eventDate) {
+function eventIsUpcoming(event) {
+  var eventDate = Date.parse(event.date);
   var currentDate = Date.now()
   return eventDate > currentDate;
 }

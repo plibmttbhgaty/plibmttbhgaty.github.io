@@ -61,13 +61,8 @@ function updateMarkers(data) {
   nullAllMarkers();
 
   for (var i = 0; i < data.length; i++) {
-    var currentDate = Date.now()
     var event = data[i];
-    var eventDate = Date.parse(event.date);
-
-    if (eventIsUpcoming(eventDate)) {
-      codeAddress(data[i]);
-    };
+    codeAddress(data[i]);
   }
 }
 
@@ -90,23 +85,28 @@ function init() {
     // Initializes geocoding with Google Maps API
     geocoder = new google.maps.Geocoder();
     $.get('/events.json', {}, function(data) {
+      var upcomingEvents = $.grep(data, eventIsUpcoming);
 
-      // Basic operations for a simple Google Map
-      // For more options see:
-      // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
-      var mapOptions = {
-          zoom: 2,
-          center: new google.maps.LatLng(40.6700, -73.9400), // NYC
-          disableDefaultUI: true,
-          scrollwheel: false,
-          styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#e6f3d6"},{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#f4d2c5"},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"color":"#4e4e4e"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#f4f4f4"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#787878"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#eaf6f8"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#eaf6f8"}]}]
-      };
+      if (upcomingEvents.length > 0) {
 
-      // Get the HTML DOM element that will contain your map
-      // We are using a div with id="event-map" seen below
-      var mapElement = document.getElementById('event-map');
-      map = new google.maps.Map(mapElement, mapOptions);
+        // Basic operations for a simple Google Map
+        // For more options see:
+        // https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            zoom: 2,
+            center: new google.maps.LatLng(40.6700, -73.9400), // NYC
+            disableDefaultUI: true,
+            scrollwheel: false,
+            styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"landscape","elementType":"geometry.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry.fill","stylers":[{"color":"#e6f3d6"},{"visibility":"on"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#f4d2c5"},{"visibility":"simplified"}]},{"featureType":"road.highway","elementType":"labels.text","stylers":[{"color":"#4e4e4e"}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#f4f4f4"}]},{"featureType":"road.arterial","elementType":"labels.text.fill","stylers":[{"color":"#787878"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#eaf6f8"},{"visibility":"on"}]},{"featureType":"water","elementType":"geometry.fill","stylers":[{"color":"#eaf6f8"}]}]
+        };
 
-      updateMarkers(data);
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="event-map" seen below
+        var mapElement = document.getElementById('event-map');
+        $(mapElement).addClass("event-map");
+        map = new google.maps.Map(mapElement, mapOptions);
+
+        updateMarkers(upcomingEvents);
+      }
     });
 }
