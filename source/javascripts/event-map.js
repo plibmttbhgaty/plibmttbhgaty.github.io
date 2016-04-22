@@ -10,11 +10,10 @@ function addInfoWindow(marker, event) {
                       '</div>' +
                       '<h1 class="info-heading">' + event["location"] + '</h1>' +
                       '<ul>' +
-                      '<li><b>Host:</b> ' + event["hostName"] + '</li>' +
-                      '<li><b>Date:</b> ' + event["date"] + '</li>' +
-                      '<li><b>RSVP:</b> ' + event["rsvpUrl"] + '</li>' +
-                      '</ul>' +
-                      '<center><a href="' + event["more-info"] + '">More Information</b></a><br><br>';
+                      '<li><strong>Host:</strong> ' + event["hostName"] + '</li>' +
+                      '<li><strong>Date:</strong> ' + event["date"] + '</li>' +
+                      "<li><a href='" + event["rsvpUrl"] + "'>RSVP TODAY!</a></li>" +
+                      '</ul>'
 
   var infoWindow = new google.maps.InfoWindow({
     content: contentString
