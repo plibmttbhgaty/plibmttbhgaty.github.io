@@ -16,7 +16,7 @@
   animation: bounce 1s $ease-in-out-sine alternate infinite;
   color: $accent-color;
   font-family: $logo-font-family;
-  font-size: 9vw;
+  font-size: 7vw;
   font-weight: $header-font-weight;
 
   @include media($large-screen) {

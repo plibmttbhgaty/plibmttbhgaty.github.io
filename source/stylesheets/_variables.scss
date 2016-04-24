@@ -63,7 +63,13 @@ $hero-shadow-color: desaturate(darken($hero-text-color, 10%), 15%);
 // Borders
 $base-border-color: $accent-color;
 $base-border: 6px $base-border-color solid;
-$base-border-radius: 3px;
+$base-border-radius: 0.5rem;
+
+// Sizes
+$max-box-width: 600px;
+
+// Shadows
+$base-box-shadow: 0 5px 20px rgba($black, 0.15);
 
 // Spacing
 $base-spacing: 1rem;
@@ -83,7 +89,7 @@ $anim-easing: ease-in;
 $z-1under: -1;
 $z-1above: 1;
 
-// Media
+// Mixins
 $shadow-height: 12px;
 
 @function shadow-array-generator($color, $num) {

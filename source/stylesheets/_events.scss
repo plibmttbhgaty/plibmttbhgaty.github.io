@@ -17,7 +17,7 @@
 }
 .event-map {
   border: 1px rgba(white, 0.75) solid;
-  box-shadow: 0 5px 20px rgba($black, 0.15);
+  box-shadow: $base-box-shadow;
   height: 100vh;
   margin-left: -($base-spacing);
   max-height: 350px;

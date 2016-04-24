@@ -22,12 +22,13 @@ main {
   flex-direction: column;
   font-size: $large-font-size;
   overflow: visible;
-  padding-top: $largest-spacing;
+  padding-top: $base-spacing;
   position: relative;
 
   @include media($large-screen) {
     font-size: $copy-font-size;
     margin-left: auto;
+    padding-top: 10vh;
     width: 65%;
   }
 
@@ -91,7 +92,8 @@ a {
 }
 
 img,
-svg {
+svg,
+iframe {
   vertical-align: top;
 }
 
@@ -99,6 +101,11 @@ svg {
   @include padding($base-spacing);
   background-color: white;
   border-top: $base-border;
+
+  @include media(max-width $large-screen) {
+    @include margin(null auto);
+    max-width: $max-box-width;
+  }
 
   @include media($large-screen) {
     @include box-hover-long-shadow($accent-color, 20);

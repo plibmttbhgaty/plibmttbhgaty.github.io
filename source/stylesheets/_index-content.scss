@@ -6,7 +6,19 @@
   }
 }
 
+.what-is {
+  @include media(max-width $large-screen) {
+    margin-top: (-$base-spacing * 2);
+  }
+
+  @include media(min-width $large-screen) {
+    margin-top: -3vh;
+  }
+}
+
 .host-party {
+  margin-top: -$larger-spacing;
+
   h3 {
     font-weight: $bold-font-weight;
     margin-top: $larger-spacing;

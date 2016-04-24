@@ -1,0 +1,59 @@
+.photo {
+  @include size(100% auto);
+  border-radius: $base-border-radius;
+  max-width: 680px;
+  z-index: $z-1under;
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    @include margin(0 auto);
+  }
+}
+
+.photo-1 {
+  box-shadow: $base-box-shadow;
+
+  @include media(min-width $large-screen) {
+    margin-right: -5vw;
+    transform: rotate(3deg);
+    width: calc(100% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    margin-right: $large-spacing;
+    width: calc(100% + 3em);
+  }
+}
+
+.photo-2 {
+  transform: rotate(-4deg);
+}
+
+.photo-3 {
+  box-shadow: $base-box-shadow;
+
+  @include media($medium-screen) {
+    @include margin(null auto null (-$large-spacing));
+    transform: rotate(-5deg);
+  }
+
+  @include media($large-screen) {
+    max-width: 590px;
+    margin-left: -5rem;
+  }
+}
+
+.vine {
+  @include margin(-$large-spacing auto $below-spacing);
+  box-shadow: $base-box-shadow;
+  border-radius: $base-border-radius;
+  max-width: $max-box-width;
+  overflow: hidden;
+  text-align: center;
+  transform: rotate(3deg);
+  width: 70%;
+
+  @include media($large-screen) {
+    margin-bottom: $large-below-spacing;
+    max-width: $max-box-width * 0.75;
+  }
+}
