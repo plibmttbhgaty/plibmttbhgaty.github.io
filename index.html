@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Programming Languages I've Been Meaning To Try But Haven't Gotten Around To Yet">
+    <meta name="keywords" content="C,Clojure,Elixir,Elm,Erlang,Fortran,Go,Haskell,Idris,Java,JavaScript,Julia,Lisp,Lua,OCaml,PLIBMTTBHGATY,Python,Ruby,Rust,Scala,Scheme,Swift">
+
+    <title>PLIBMTTBHGATY</title>
+
+    <link href="stylesheets/screen.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Biryani:300,700' rel='stylesheet' type='text/css'>
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <script src="javascripts/all.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_LVaTnvQk8ism9vVxf4cGuReF-1X_6BE&sensor=false"></script>
+<script type="text/javascript" src="../javascripts/event-map.js"></script>
+
+  </head>
+
+  <body class="index">
+    <h1 class="fullname">
+  <span class="word-highlight is-highlighted">Programming</span>
+  <span class="word-highlight">Languages</span>
+  <!-- <br /> -->
+  <span class="word-highlight">I've</span>
+  <span class="word-highlight">Been</span>
+  <!-- <br /> -->
+  <span class="word-highlight">Meaning</span>
+  <span class="word-highlight">To</span>
+  <!-- <br /> -->
+  <span class="word-highlight">Try</span>
+  <span class="word-highlight">But</span>
+  <!-- <br /> -->
+  <span class="word-highlight">Haven't</span>
+  <span class="word-highlight">Gotten</span>
+  <!-- <br /> -->
+  <span class="word-highlight">Around</span>
+  <span class="word-highlight">To</span>
+  <span class="word-highlight">Yet</span>
+</h1>
+
+
+    <main id="main" role="main">
+      <img class="photo photo-1" width="600" height="337" src="images/photo-1.jpg" />
+
+<section class="content-section box what-is" id="jump--what-is">
+  <h1 class="acronym">PLIBMTTBHGATY!</h1>
+  <h2>What is this thing?</h2>
+  <p>
+    It's a lightly-structured party where people get together and work on a project in a new programming language, either with or just near each other.
+  </p>
+
+  <p>
+    This all started with the realization that plenty of people have a side-project in mind to work on, that it's more fun to work together, and that many of us are just waiting for a good excuse to get started.
+  </p>
+</section>
+
+<img class="photo photo-2" width="600" height="412" src="images/photo-2.jpg" />
+<div class="vine">
+  <iframe src="https://vine.co/v/MbU6eDQYwl5/embed/simple" width="600" height="600" frameborder="0"></iframe>
+  <script src="https://platform.vine.co/static/scripts/embed.js"></script>
+</div>
+
+
+<section class="content-section events">
+  <div class="box">
+    <h2>Events</h2>
+    <p class="no-upcoming-events hidden">No upcoming events <i class="em em-cry"></i></p>
+    <ul class="events-list" id="events-list"></ul>
+
+    <ul class="events-list past-events-list" id="past-events-list"></ul>
+  </div>
+
+  <div id="event-map"></div>
+</section>
+
+<img class="photo photo-3" width="600" height="450" src="images/photo-3.jpg" />
+<div class="box content-section host-party">
+  <h2>Host a PLIBMTT-PARTY</h2>
+  <p>
+    It's easy to throw a PLIBMTTBHGATY; just find a space, <a href="https://github.com/plibmttbhgaty/plibmttbhgaty.github.io" target="blank">open a pull request</a> to add your event to this website, and invite some friends.
+  </p>
+
+  <h3>Some ingredients include:</h3>
+  <ul class="party-ingredients">
+    <li class="party-ingredient"><p>
+      Coffee
+    </p></li>
+    <li class="party-ingredient"><p>
+      Breakfast
+    </p></li>
+    <li class="party-ingredient"><p>
+      Name tags
+    </p></li>
+    <li class="party-ingredient"><p>
+      Whiteboards
+    </p></li>
+    <li class="party-ingredient"><p>
+      Couches
+    </p></li>
+    <li class="party-ingredient"><p>
+      Reference books
+    </p></li>
+    <li class="party-ingredient"><p>
+      Lunch
+    </p></li>
+    <li class="party-ingredient"><p>
+      Signs with names of programming languages
+    </p></li>
+    <li class="party-ingredient"><p>
+      A show-and-tell at the end
+    </p></li>
+  </ul>
+  <p>Four to five hours seems to be about the right amount of time for this.</p>
+</div>
+
+<script type="text/javascript">
+  google.maps.event.addDomListener(
+    window,
+    "load",
+    function() {
+      $.get('events.json', {}, function(data) {
+        var upcomingEvents = $.grep(data, eventIsUpcoming);
+        new Plibmttbhgaty.EventMap().init(upcomingEvents);
+      });
+    }
+  );
+</script>
+
+      <footer class="footer">
+  <nav class="nav">
+    <ul class="social-list">
+      <li class="social code-of-conduct"><a href="/code_of_conduct">Code of Conduct</a></li>
+      <li class="social twitter"><a href="http://twitter.com/plibmttbhgaty">Twitter</a></li>
+      <li class="social github"><a href="http://github.com/plibmttbhgaty">Github</a></li>
+      <li class="social email"><a href="mailto:stars+plibmttbhgaty@mit.edu">Email</a></li>
+    </ul>
+  </nav>
+
+  <p>&copy; 2016 PLIBMTTBHGATY &mdash; designed by <a href="https://www.thoughtbot.com">thoughtbot</a> <i class="em em-kissing_heart"></i></p>
+</footer>
+
+    </main>
+  </body>
+</html>
