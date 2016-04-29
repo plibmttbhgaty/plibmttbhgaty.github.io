@@ -43,7 +43,6 @@
 }
 
 .tweet {
-  @include size(100% auto);
   border-radius: $base-border-radius;
   max-width: 680px;
   z-index: $z-1under;
@@ -71,17 +70,20 @@
 .tweet-2 {
   box-shadow: none;
   z-index: $z-1above;
+  margin: 0 auto 1.5em auto;
+
 
   @include media(min-width $large-screen) {
-    margin-top: 18vw;
-    margin-right: none;
-    margin-bottom: 2vw;
     transform: rotate(-5deg);
     width: calc(50% + 10vw);
   }
 
   @include media(min-width $max-width) {
     width: calc(50% + 3em);
+  }
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    width: calc(60% + 3em);
   }
 }
 
@@ -90,6 +92,7 @@
   z-index: $z-1above;
 
   @include media(min-width $large-screen) {
+    margin-top: -5rem;
     margin-left: 1.9vw;
     transform: rotate(5deg);
     width: calc(50% + 10vw);
@@ -98,20 +101,9 @@
   @include media(min-width $max-width) {
     width: calc(50% + 3em);
   }
-}
 
-.tweet-4 {
-  box-shadow: none;
-  margin-top: -5vw;
-  margin-right: 20vw;
-
-  @include media(min-width $large-screen) {
-    transform: rotate(-5deg);
-    width: calc(50% + 10vw);
-  }
-
-  @include media(min-width $max-width) {
-    width: calc(50% + 3em);
+  @include media(max-width $large-screen) {
+    margin-bottom: $largest-spacing;
   }
 }
 

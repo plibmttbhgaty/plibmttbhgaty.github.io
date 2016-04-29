@@ -1,8 +1,8 @@
 .content-section {
-  margin-bottom: $below-spacing;
+  margin-bottom: $base-spacing;
 
   @include media($large-screen) {
-    margin-bottom: $large-below-spacing;
+    margin-bottom: $largest-spacing;
   }
 }
 
