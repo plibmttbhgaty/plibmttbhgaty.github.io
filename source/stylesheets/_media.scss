@@ -42,6 +42,56 @@
   }
 }
 
+.tweet {
+  border-radius: $base-border-radius;
+  box-shadow: none;
+  max-width: 680px;
+  z-index: $z-1under;
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    @include margin(0 auto);
+  }
+}
+
+
+.tweet-1 {
+  @include media(min-width $large-screen) {
+    margin-right: -5vw;
+    transform: rotate(5deg);
+    width: calc(100% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    width: calc(100% + 3em);
+  }
+}
+
+.tweet-2 {
+  margin: 0 auto 1.5em auto;
+  width: calc(50% + 3em);
+  z-index: $z-1above;
+
+
+  @include media(min-width $large-screen) {
+    transform: rotate(-5deg);
+    width: calc(50% + 3em);
+  }
+}
+
+.tweet-3 {
+  width: calc(50% + 3em);
+  z-index: $z-1above;
+
+  @include media(min-width $large-screen) {
+    margin-top: -5rem;
+    transform: rotate(5deg);
+  }
+
+  @include media(max-width $large-screen) {
+    margin-bottom: $largest-spacing;
+  }
+}
+
 .vine {
   @include margin(-$large-spacing auto $below-spacing);
   box-shadow: $base-box-shadow;
