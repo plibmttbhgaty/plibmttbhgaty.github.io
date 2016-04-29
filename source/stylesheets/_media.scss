@@ -42,6 +42,79 @@
   }
 }
 
+.tweet {
+  @include size(100% auto);
+  border-radius: $base-border-radius;
+  max-width: 680px;
+  z-index: $z-1under;
+
+  @include media(min-width $medium-screen max-width $large-screen) {
+    @include margin(0 auto);
+  }
+}
+
+
+.tweet-1 {
+  box-shadow: none;
+
+  @include media(min-width $large-screen) {
+    margin-right: -5vw;
+    transform: rotate(5deg);
+    width: calc(100% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    width: calc(100% + 3em);
+  }
+}
+
+.tweet-2 {
+  box-shadow: none;
+  z-index: $z-1above;
+
+  @include media(min-width $large-screen) {
+    margin-top: 18vw;
+    margin-right: none;
+    margin-bottom: 2vw;
+    transform: rotate(-5deg);
+    width: calc(50% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    width: calc(50% + 3em);
+  }
+}
+
+.tweet-3 {
+  box-shadow: none;
+  z-index: $z-1above;
+
+  @include media(min-width $large-screen) {
+    margin-left: 1.9vw;
+    transform: rotate(5deg);
+    width: calc(50% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    width: calc(50% + 3em);
+  }
+}
+
+.tweet-4 {
+  box-shadow: none;
+  margin-top: -5vw;
+  margin-right: 20vw;
+
+  @include media(min-width $large-screen) {
+    transform: rotate(-5deg);
+    width: calc(50% + 10vw);
+  }
+
+  @include media(min-width $max-width) {
+    width: calc(50% + 3em);
+  }
+}
+
 .vine {
   @include margin(-$large-spacing auto $below-spacing);
   box-shadow: $base-box-shadow;
