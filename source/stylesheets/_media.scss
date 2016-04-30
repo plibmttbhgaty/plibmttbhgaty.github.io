@@ -72,6 +72,11 @@
   z-index: $z-1above;
 
 
+  @include media(min-width $medium-screen) {
+    margin-top: 18em;
+    margin-right: 20em;
+  }
+
   @include media(min-width $large-screen) {
     transform: rotate(-5deg);
     width: calc(50% + 3em);
