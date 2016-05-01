@@ -20,7 +20,7 @@ main {
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  font-size: $large-font-size;
+  font-size: $base-font-size;
   overflow: visible;
   padding-top: $base-spacing;
   position: relative;
@@ -64,7 +64,7 @@ h2 {
 
 h2 {
   @include margin($large-spacing null $larger-spacing);
-  font-size: $header-font-size * 0.65;
+  font-size: $header-font-size * 0.8;
 
   @include media($medium-screen) {
     font-size: $header-font-size;
@@ -98,7 +98,7 @@ iframe {
 }
 
 .box {
-  @include padding($base-spacing);
+  @include padding($large-spacing);
   background-color: white;
   border-top: $base-border;
 

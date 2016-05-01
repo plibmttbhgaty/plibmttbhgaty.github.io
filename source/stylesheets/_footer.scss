@@ -1,4 +1,5 @@
 .footer {
+  font-size: $base-font-size;
   text-align: right;
 
   a {
@@ -7,7 +8,6 @@
 
   p {
     color: $yellow-dark;
-    font-size: $base-font-size;
     margin-top: $base-spacing;
   }
 }

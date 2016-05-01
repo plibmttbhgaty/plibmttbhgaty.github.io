@@ -1,0 +1,77 @@
+.tweet {
+  @include margin(null auto);
+  color: rgba($base-font-color, 0.75);
+  display: flex;
+  font-size: $base-font-size;
+  width: 100%;
+  max-width: 420px;
+  z-index: $z-1under;
+
+  a {
+    border: 0;
+    font-weight: $base-font-weight;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  svg {
+    @include size(3rem 2rem);
+    box-sizing: content-box;
+    margin-right: $base-spacing;
+    max-width: 1rem;
+
+    path {
+      fill: $twitter-color;
+    }
+  }
+}
+
+.tweet-quote {
+  margin: 0;
+}
+
+.tweet-by a {
+  color: $twitter-color;
+  font-size: $small-font-size;
+}
+
+.tweet-1 {
+  @include margin($base-spacing null);
+
+  @include media($medium-screen) {
+    margin-left: 0;
+  }
+
+  @include media($wide-screen) {
+    margin-left: (-$largest-spacing);
+  }
+}
+
+.tweet-2 {
+  @include margin($larger-spacing null $base-spacing);
+
+  @include media($medium-screen) {
+    @include margin(null null -1rem 0);
+    z-index: 0;
+  }
+
+  @include media($large-screen) {
+    @include margin(0 null null 10rem);
+  }
+
+  @include media($wide-screen) {
+    @include position(absolute, 12rem null null (-$large-spacing));
+    margin: 0;
+    transform: rotate(-5deg);
+  }
+}
+
+.tweet-3 {
+  @include margin($large-spacing null);
+
+  @include media($medium-screen) {
+    @include margin($base-spacing 0 null null);
+  }
+}
