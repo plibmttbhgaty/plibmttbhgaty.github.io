@@ -32,68 +32,13 @@
   box-shadow: $base-box-shadow;
 
   @include media($medium-screen) {
-    @include margin(null auto null (-$large-spacing));
+    @include margin(null auto null 5%);
     transform: rotate(-5deg);
   }
 
   @include media($large-screen) {
     max-width: 590px;
     margin-left: -5rem;
-  }
-}
-
-.tweet {
-  border-radius: $base-border-radius;
-  box-shadow: none;
-  max-width: 680px;
-  z-index: $z-1under;
-
-  @include media(min-width $medium-screen max-width $large-screen) {
-    @include margin(0 auto);
-  }
-}
-
-
-.tweet-1 {
-  @include media(min-width $large-screen) {
-    margin-right: -5vw;
-    transform: rotate(5deg);
-    width: calc(100% + 10vw);
-  }
-
-  @include media(min-width $max-width) {
-    width: calc(100% + 3em);
-  }
-}
-
-.tweet-2 {
-  margin: 0 auto 1.5em auto;
-  width: calc(50% + 3em);
-  z-index: $z-1above;
-
-
-  @include media(min-width $medium-screen) {
-    margin-top: 18em;
-    margin-right: 20em;
-  }
-
-  @include media(min-width $large-screen) {
-    transform: rotate(-5deg);
-    width: calc(50% + 3em);
-  }
-}
-
-.tweet-3 {
-  width: calc(50% + 3em);
-  z-index: $z-1above;
-
-  @include media(min-width $large-screen) {
-    margin-top: -5rem;
-    transform: rotate(5deg);
-  }
-
-  @include media(max-width $large-screen) {
-    margin-bottom: $largest-spacing;
   }
 }
 
@@ -108,7 +53,7 @@
   width: 70%;
 
   @include media($large-screen) {
-    margin-bottom: $large-below-spacing;
+    margin-bottom: $largest-spacing * 2;
     max-width: $max-box-width * 0.75;
   }
 }

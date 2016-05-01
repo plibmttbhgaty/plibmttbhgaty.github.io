@@ -7,10 +7,9 @@
   }
 
   .box {
-    margin-bottom: $largest-spacing;
-
     @include media($large-screen) {
       float: right;
+      margin-right: $larger-spacing;
       min-width: 28rem;
     }
   }
@@ -18,17 +17,15 @@
 .event-map {
   border: 1px rgba(white, 0.75) solid;
   box-shadow: $base-box-shadow;
-  height: 100vh;
-  margin-left: -($base-spacing);
-  max-height: 350px;
-  width: calc(100% + (2 * #{$base-spacing}));
+  display: none;
 
   @include media($large-screen) {
-    @include position(relative, -1.75rem null null 0);
+    @include size(100% 50vh);
+    @include position(relative, -5rem (-$base-spacing) null 0);
+    display: block;
     margin-left: auto;
     max-height: 450px;
     max-width: 65rem;
-    width: calc(100% + #{$base-spacing});
   }
 
   @include media($wide-screen) {
@@ -44,7 +41,18 @@
 .past-events-list {
   counter-reset: none;
   margin-top: $large-spacing;
+  max-height: 15rem;
+  overflow: hidden;
+  position: relative;
   padding-top: $large-spacing;
+
+  &::after {
+    @include background(linear-gradient(rgba(white, 0), white));
+    @include position(absolute, 0px);
+    @include size(100%);
+    display: block;
+    content: "";
+  }
 }
 
 .event {
