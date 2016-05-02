@@ -9,7 +9,6 @@
   .box {
     @include media($large-screen) {
       float: right;
-      margin-right: $larger-spacing;
       min-width: 28rem;
     }
   }

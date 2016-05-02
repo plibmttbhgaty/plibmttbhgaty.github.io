@@ -14,30 +14,11 @@
   p {
     margin-bottom: 0;
   }
-
-  svg {
-    @include size(3rem 2rem);
-    box-sizing: content-box;
-    margin-right: $base-spacing;
-    max-width: 1rem;
-
-    path {
-      fill: $twitter-color;
-    }
-  }
-}
-
-.tweet-quote {
-  margin: 0;
-}
-
-.tweet-by a {
-  color: $twitter-color;
-  font-size: $small-font-size;
 }
 
 .tweet-1 {
   @include margin($base-spacing null);
+  transform: rotate(1deg);
 
   @include media($medium-screen) {
     margin-left: 0;
@@ -60,16 +41,18 @@
   }
 
   @include media($wide-screen) {
-    @include position(absolute, 12rem null null (-$large-spacing));
+    @include position(absolute, 9.5rem 30rem null null);
     margin: 0;
     transform: rotate(-5deg);
   }
 }
 
 .tweet-3 {
-  @include margin($large-spacing null);
+  @include margin((-$larger-spacing) null $large-spacing);
+  transform: rotate(-1deg);
 
   @include media($medium-screen) {
-    @include margin($base-spacing 0 null null);
+    @include margin((-$large-spacing) 0 null null);
+    transform: rotate(0);
   }
 }

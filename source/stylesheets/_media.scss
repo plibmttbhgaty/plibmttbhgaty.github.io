@@ -25,20 +25,26 @@
 }
 
 .photo-2 {
+  margin-top: (-$large-spacing);
   transform: rotate(-4deg);
+  z-index: $z-1above;
+
+  @include media($medium-screen) {
+    margin-top: (-$larger-spacing);
+  }
 }
 
 .photo-3 {
   box-shadow: $base-box-shadow;
 
   @include media($medium-screen) {
-    @include margin(null auto null 5%);
+    @include margin((-$large-spacing) auto null 5%);
     transform: rotate(-5deg);
   }
 
   @include media($large-screen) {
-    max-width: 590px;
-    margin-left: -5rem;
+    @include margin((-$largest-spacing) null null 10%);
+    max-width: 630px;
   }
 }
 
