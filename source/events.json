@@ -1,4 +1,10 @@
 [{
+  "location": "Portland, OR",
+  "hostName": "Simple",
+  "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-25185166511",
+  "date": "June 18, 2016"
+},
+{
   "location": "Waterloo, ON",
   "hostName": "University of Waterloo",
   "rsvpUrl": "https://www.eventbrite.ca/e/plibmttbhgaty-uw-tickets-24937231932",
