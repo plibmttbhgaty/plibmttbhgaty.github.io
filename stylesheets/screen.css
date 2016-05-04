@@ -66,7 +66,7 @@ main {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 20px;
+  font-size: 16px;
   overflow: visible;
   padding-top: 1rem;
   position: relative; }
@@ -104,7 +104,7 @@ h2 {
 h2 {
   margin-top: 1.5rem;
   margin-bottom: 3rem;
-  font-size: 19.5px; }
+  font-size: 24px; }
   @media screen and (min-width: 600px) {
     h2 {
       font-size: 30px; } }
@@ -131,7 +131,7 @@ iframe {
   vertical-align: top; }
 
 .box {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: white;
   border-top: 6px #f639a5 solid; }
   @media screen and (max-width: 900px) {
@@ -222,12 +222,12 @@ iframe {
               transform: translate3d(calc(8 * -1px), calc(8 * -1px), 0); }
 
 .footer {
+  font-size: 16px;
   text-align: right; }
   .footer a {
     color: inherit; }
   .footer p {
     color: #b3a971;
-    font-size: 16px;
     margin-top: 1rem; }
 
 nav.top {
@@ -258,66 +258,28 @@ nav.top {
       width: calc(100% + 3em); } }
 
 .photo-2 {
+  margin-top: -1.5rem;
   -webkit-transform: rotate(-4deg);
-          transform: rotate(-4deg); }
+          transform: rotate(-4deg);
+  z-index: 1; }
+  @media screen and (min-width: 600px) {
+    .photo-2 {
+      margin-top: -3rem; } }
 
 .photo-3 {
   box-shadow: 0 5px 20px rgba(26, 25, 25, 0.15); }
   @media screen and (min-width: 600px) {
     .photo-3 {
+      margin-top: -1.5rem;
       margin-right: auto;
-      margin-left: -1.5rem;
+      margin-left: 5%;
       -webkit-transform: rotate(-5deg);
               transform: rotate(-5deg); } }
   @media screen and (min-width: 900px) {
     .photo-3 {
-      max-width: 590px;
-      margin-left: -5rem; } }
-
-.tweet {
-  border-radius: 0.5rem;
-  box-shadow: none;
-  max-width: 680px;
-  z-index: -1; }
-  @media screen and (min-width: 600px) and (max-width: 900px) {
-    .tweet {
-      margin: 0 auto; } }
-
-@media screen and (min-width: 900px) {
-  .tweet-1 {
-    margin-right: -5vw;
-    -webkit-transform: rotate(5deg);
-            transform: rotate(5deg);
-    width: calc(100% + 10vw); } }
-@media screen and (min-width: 68em) {
-  .tweet-1 {
-    width: calc(100% + 3em); } }
-
-.tweet-2 {
-  margin: 0 auto 1.5em auto;
-  width: calc(50% + 3em);
-  z-index: 1; }
-  @media screen and (min-width: 600px) {
-    .tweet-2 {
-      margin-top: 18em;
-      margin-right: 20em; } }
-  @media screen and (min-width: 900px) {
-    .tweet-2 {
-      -webkit-transform: rotate(-5deg);
-              transform: rotate(-5deg);
-      width: calc(50% + 3em); } }
-
-.tweet-3 {
-  width: calc(50% + 3em);
-  z-index: 1; }
-  @media screen and (min-width: 900px) {
-    .tweet-3 {
-      margin-top: -5rem;
-      -webkit-transform: rotate(5deg);
-              transform: rotate(5deg); } }
-  @media screen and (max-width: 900px) {
-    .tweet-3 {
-      margin-bottom: 3rem; } }
+      margin-top: -3rem;
+      margin-left: 10%;
+      max-width: 630px; } }
 
 .vine {
   margin: -1.5rem auto 4rem;
@@ -331,8 +293,69 @@ nav.top {
   width: 70%; }
   @media screen and (min-width: 900px) {
     .vine {
-      margin-bottom: 9.5rem;
+      margin-bottom: 6rem;
       max-width: 450px; } }
+
+.tweet {
+  margin-right: auto;
+  margin-left: auto;
+  color: rgba(26, 25, 25, 0.75);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  width: 100%;
+  max-width: 420px; }
+  .tweet a {
+    border: 0;
+    font-weight: 300; }
+  .tweet p {
+    margin-bottom: 0; }
+
+.tweet-1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-transform: rotate(1deg);
+          transform: rotate(1deg); }
+  @media screen and (min-width: 600px) {
+    .tweet-1 {
+      margin-left: 0; } }
+  @media screen and (min-width: 1400px) {
+    .tweet-1 {
+      margin-left: -3rem; } }
+
+.tweet-2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem; }
+  @media screen and (min-width: 600px) {
+    .tweet-2 {
+      margin-bottom: -1rem;
+      margin-left: 0; } }
+  @media screen and (min-width: 900px) {
+    .tweet-2 {
+      margin-top: 0;
+      margin-left: 10rem; } }
+  @media screen and (min-width: 1400px) {
+    .tweet-2 {
+      position: absolute;
+      top: 9.5rem;
+      right: 30rem;
+      margin: 0;
+      -webkit-transform: rotate(-5deg);
+              transform: rotate(-5deg); } }
+
+.tweet-3 {
+  margin-top: -3rem;
+  margin-bottom: 1.5rem;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg); }
+  @media screen and (min-width: 600px) {
+    .tweet-3 {
+      margin-top: -1.5rem;
+      margin-right: 0;
+      -webkit-transform: rotate(0);
+              transform: rotate(0); } }
 
 .fullname {
   margin-top: 1rem;
@@ -380,7 +403,7 @@ nav.top {
           transform: translate3d(calc(12 * -1px), calc(12 * -1px), 0); }
 
 .content-section {
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
   @media screen and (min-width: 900px) {
     .content-section {
       margin-bottom: 3rem; } }
@@ -392,11 +415,14 @@ nav.top {
   .what-is {
     margin-top: -3vh; } }
 
-.host-party {
-  margin-top: -3rem; }
-  .host-party h3 {
-    font-weight: 700;
-    margin-top: 3rem; }
+@media screen and (min-width: 600px) {
+  .host-party {
+    width: 100%; }
+    .host-party .box {
+      margin-top: 3rem; } }
+.host-party h3 {
+  font-weight: 700;
+  margin-top: 3rem; }
 
 .party-ingredients {
   margin-bottom: 3rem;
@@ -430,28 +456,26 @@ nav.top {
   @media screen and (min-width: 900px) {
     .events {
       width: 125%; } }
-  .events .box {
-    margin-bottom: 3rem; }
-    @media screen and (min-width: 900px) {
-      .events .box {
-        float: right;
-        min-width: 28rem; } }
+  @media screen and (min-width: 900px) {
+    .events .box {
+      float: right;
+      min-width: 28rem; } }
 
 .event-map {
   border: 1px rgba(255, 255, 255, 0.75) solid;
   box-shadow: 0 5px 20px rgba(26, 25, 25, 0.15);
-  height: 100vh;
-  margin-left: -1rem;
-  max-height: 350px;
-  width: calc(100% + (2 * 1rem)); }
+  display: none; }
   @media screen and (min-width: 900px) {
     .event-map {
+      width: 100%;
+      height: 50vh;
       position: relative;
-      top: -1.75rem;
+      top: -5rem;
+      right: -1rem;
+      display: block;
       margin-left: auto;
       max-height: 450px;
-      max-width: 65rem;
-      width: calc(100% + 1rem); } }
+      max-width: 65rem; } }
   @media screen and (min-width: 1400px) {
     .event-map {
       max-height: 650px; } }
@@ -463,7 +487,22 @@ nav.top {
 .past-events-list {
   counter-reset: none;
   margin-top: 1.5rem;
+  max-height: 15rem;
+  overflow: hidden;
+  position: relative;
   padding-top: 1.5rem; }
+  .past-events-list::after {
+    background: -webkit-linear-gradient( rgba(255, 255, 255, 0), white);
+    background: linear-gradient( rgba(255, 255, 255, 0), white);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    content: ""; }
 
 .event {
   counter-increment: events;
