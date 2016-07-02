@@ -1,31 +1,44 @@
-[{
-  "location": "Portland, OR",
-  "hostName": "Simple",
-  "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-25185166511",
-  "date": "June 18, 2016"
-},
-{
-  "location": "Waterloo, ON",
-  "hostName": "University of Waterloo",
-  "rsvpUrl": "https://www.eventbrite.ca/e/plibmttbhgaty-uw-tickets-24937231932",
-  "date": "May 15, 2016"
-},
-{
-  "location": "Portland, OR",
-  "hostName": "Simple",
-  "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-21843234703",
-  "date": "March 05, 2016"
-},
-{
-  "location": "Melbourne, VIC",
-  "hostName": "FastMail",
-  "rsvpUrl": "http://www.meetup.com/PLIBMTTBHGATY-Melbourne",
-  "date": "January 30, 2016"
-},
-{
-  "location": "Des Moines, IA",
-  "hostName": "Gravitate",
-  "rsvpUrl": "http://www.meetup.com/Area515/events/226557087/",
-  "date": "January 09, 2016"
-}
+[
+  {
+    "location": "Indianapolis, IN",
+    "hostName": "The Iron Yard",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-26116391831",
+    "date": "September 24, 2016"
+  },
+  {
+    "location": "London, UK",
+    "hostName": "Makers Academy",
+    "rsvpUrl": "https://www.eventbrite.co.uk/e/plibmttbhgaty-tickets-25232468994",
+    "date": "July 2, 2016"
+  },
+  {
+    "location": "Portland, OR",
+    "hostName": "Simple",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-25185166511",
+    "date": "June 18, 2016"
+  },
+  {
+    "location": "Waterloo, ON",
+    "hostName": "University of Waterloo",
+    "rsvpUrl": "https://www.eventbrite.ca/e/plibmttbhgaty-uw-tickets-24937231932",
+    "date": "May 15, 2016"
+  },
+  {
+    "location": "Portland, OR",
+    "hostName": "Simple",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-21843234703",
+    "date": "March 05, 2016"
+  },
+  {
+    "location": "Melbourne, VIC",
+    "hostName": "FastMail",
+    "rsvpUrl": "http://www.meetup.com/PLIBMTTBHGATY-Melbourne",
+    "date": "January 30, 2016"
+  },
+  {
+    "location": "Des Moines, IA",
+    "hostName": "Gravitate",
+    "rsvpUrl": "http://www.meetup.com/Area515/events/226557087/",
+    "date": "January 09, 2016"
+  }
 ]
