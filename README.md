@@ -50,6 +50,6 @@ review by the maintainers.
 #### If You Do Have Commit Rights
 
 Commit your changes to the `middleman` branch and push to the remote. To deploy
-changes to the site, run `$ bundle exec middleman deploy`. If you have commit
+changes to the site, run `$ bundle exec middleman deploy --build-before`. If you have commit
 rights, the site will build, and the static files will get pushed into the
 `master` branch.
