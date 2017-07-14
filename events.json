@@ -1,5 +1,11 @@
 [
   {
+    "location": "San Francisco, CA",
+    "hostName": "thoughtbot",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-sf-tickets-36230624774",
+    "date": "August 5, 2017"
+  },
+  {
     "location": "Portland, OR",
     "hostName": "Simple",
     "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-32969997149",
