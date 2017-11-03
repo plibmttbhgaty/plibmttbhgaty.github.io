@@ -2,6 +2,18 @@
   {
     "location": "San Francisco, CA",
     "hostName": "thoughtbot",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-39554781416",
+    "date": "November 18, 2017"
+  },
+  {
+    "location": "Des Moines, IA",
+    "hostName": "ladyDev and Gravitate",
+    "rsvpUrl": "https://www.tikly.co/events/2209",
+    "date": "October 7, 2017"
+  },
+  {
+    "location": "San Francisco, CA",
+    "hostName": "thoughtbot",
     "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-sf-tickets-36230624774",
     "date": "August 5, 2017"
   },
