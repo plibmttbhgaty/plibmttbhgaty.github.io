@@ -1,4 +1,9 @@
-[
+  [{
+    "location": "London, UK",
+    "hostName": "Makers Academy",
+    "rsvpUrl": "https://www.eventbrite.co.uk/e/plibmttbhgaty-v20-tickets-40552416369",
+    "date": "January 27, 2018"
+  },
   {
     "location": "San Francisco, CA",
     "hostName": "thoughtbot",
