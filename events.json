@@ -1,4 +1,11 @@
-  [{
+[
+  {
+    "location": "San Francisco, CA",
+    "hostName": "thoughtbot",
+    "rsvpUrl": "https://www.eventbrite.com/e/plibmttbhgaty-tickets-46244443375",
+    "date": "June 30, 2018"
+  },
+  {
     "location": "London, UK",
     "hostName": "Makers Academy",
     "rsvpUrl": "https://www.eventbrite.co.uk/e/plibmttbhgaty-v20-tickets-40552416369",
